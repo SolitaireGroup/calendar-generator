@@ -4,9 +4,6 @@ import re
 from typing import Dict, List, Optional
 import logging
 
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
-
-
 class ScheduleParser:
     """
     Parser para extrair horários escolares de imagens usando OCR
@@ -244,4 +241,5 @@ class ScheduleParser:
                 # Adiciona a matéria à hora correspondente
                 resultado[weekday_num][aula_num + 1] = materia if materia != "???" else None
         
+
         return resultado
